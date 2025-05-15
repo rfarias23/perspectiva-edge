@@ -16,9 +16,9 @@ Deno.serve(async (req) => {
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   // 2. OpenAI embeddings
-  const openai = new OpenAIApi(
-const openai = new OpenAI({ apiKey: Deno.env.get("OPENAI_API_KEY") });
-  );
+  const openai = new OpenAI({
+    apiKey: Deno.env.get("OPENAI_API_KEY"),
+  });
 
   // 3. Lee la lista de fuentes
   const { data: sources, error: srcErr } = await supabase
