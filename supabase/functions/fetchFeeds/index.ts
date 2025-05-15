@@ -6,7 +6,7 @@
  */
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.42";
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@4.14";
+import OpenAI from "https://esm.sh/openai@4.14.1?target=deno";
 import Parser from "https://esm.sh/rss-parser@3.13";
 
 Deno.serve(async (req) => {
@@ -17,7 +17,7 @@ Deno.serve(async (req) => {
 
   // 2. OpenAI embeddings
   const openai = new OpenAIApi(
-    new Configuration({ apiKey: Deno.env.get("OPENAI_API_KEY") })
+const openai = new OpenAI({ apiKey: Deno.env.get("OPENAI_API_KEY") });
   );
 
   // 3. Lee la lista de fuentes
