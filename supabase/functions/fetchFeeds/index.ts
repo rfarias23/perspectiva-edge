@@ -8,7 +8,7 @@
  */
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.42";
-import OpenAI       from "https://deno.land/x/openai@4.14.1/mod.ts";
+import OpenAI from "https://deno.land/x/openai@v4.14.0/mod.ts";
 import Parser       from "https://esm.sh/rss-parser@3.13";
 
 // ──────────────────────────────────────────────────────────
